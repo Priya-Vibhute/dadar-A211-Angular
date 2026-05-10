@@ -1,1 +1,12 @@
-<p>serviceexample works!</p>
+
+<h1>Products</h1>
+<div class="container bg-warning p-3 m-2" *ngFor="let p of products">
+    <p>Id is {{p.id}}</p>
+    <p>Name is {{p.name}}</p>
+    <p>Price is {{p.price}}</p>
+</div>
+
+
+<button class="btn btn-primary m-3" (click)="getProducts()">
+    Get Products
+</button>
