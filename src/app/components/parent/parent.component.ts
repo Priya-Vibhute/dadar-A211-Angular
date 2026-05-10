@@ -11,4 +11,10 @@ import { CourseComponent } from "../course/course.component";
 export class ParentComponent {
 
   studentdetails = "Vedant";
+
+  receiveMessage(data:string)
+  {
+      console.log(data)
+      alert(data)
+  }
 }

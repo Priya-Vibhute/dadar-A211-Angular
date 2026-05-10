@@ -3,7 +3,8 @@
 <div class="container bg-info m-3 p-3">
     <h3>Parent Component</h3>
     <div class="container bg-warning m-2 p-2">
-        <app-child [data]="studentdetails"></app-child>
+        <app-child [data]="studentdetails" 
+        (eventemitter)="receiveMessage($event)"></app-child>
         <app-child [data]="'Dhruv'"></app-child>
         <hr>
         <app-course [id]="1" [title]="'Angular Basics'" [instructor]="'John Doe'" [duration]="10" [level]="'Beginner'" [description]="'Learn the basics of Angular development.'"></app-course>

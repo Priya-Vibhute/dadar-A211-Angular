@@ -1,0 +1,83 @@
+<h2>Directives are classes that add additional behavior to elements in your Angular applications.
+</h2>
+
+<ul>
+    <li>Component</li>
+    <li>Attribute Directive (ngClass and ngStyle) </li>
+    <hr>
+    <p [ngClass]="['bg-warning','text-center','m-3','p-3']">Lorem ipsum dolor sit amet.</p>
+
+    <h3 [ngClass]="classList">Hello</h3>
+
+    <button class="btn btn-primary m-2" (click)="addClasses('bg-warning')">
+        Add background color
+    </button>
+    <button class="btn btn-primary m-2" (click)="addClasses('m-5')">
+        Add margin
+    </button>
+    <button class="btn btn-primary m-2" (click)="addClasses('p-5')">
+        Add Padding
+    </button>
+
+    <button class="btn btn-primary m-2" (click)="addClasses('text-center')">
+        Center text
+    </button>
+
+    <button class="btn btn-primary m-2" (click)="removeLastClass()">
+        Undo
+    </button>
+
+    <hr>
+
+    <p [ngClass]="{'bg-warning':false,'bg-danger':true}">Lorem, ipsum dolor.</p>
+
+    <div class="card  mb-3" style="max-width: 18rem;"
+        [ngClass]="{'text-white':theme,'bg-dark':theme,'text-dark':!theme,'bg-light':!theme}">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+            <h5 class="card-title">Dark card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+        </div>
+    </div>
+
+
+    <button class="btn btn-primary m-3" (click)="changeTheme()">
+        Change Theme
+    </button>
+    <li>Structural directives  (ngIf ,ngFor)</li>
+    <hr>
+
+
+    <ng-container *ngIf="loggedIn; then ifBlock else elseBlock"></ng-container>
+
+    <ng-template #ifBlock>
+      <p>You are logged In</p>
+    </ng-template>
+
+
+    <ng-template  #elseBlock>
+        <p>You are logged out</p>        
+    </ng-template>
+
+
+    <button class="btn btn-primary" (click)="changeLogin()">Login/logout</button>
+
+    <hr>
+
+    <ul>
+        <li *ngFor="let i of students">{{i}}</li>
+    </ul>
+
+    <hr>
+
+    <div class="row">
+        <div class="col" *ngFor="let p of products">
+            <ng-container *ngIf="p.outOfStock">
+              <p>Id : {{p.id}}</p>
+              <p>name : {{p.name}}</p>
+            </ng-container>
+        </div>
+    </div>
+
+</ul>
