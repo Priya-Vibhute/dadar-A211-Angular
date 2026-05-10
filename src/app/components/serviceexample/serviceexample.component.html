@@ -10,3 +10,19 @@
 <button class="btn btn-primary m-3" (click)="getProducts()">
     Get Products
 </button>
+
+<button class="btn btn-primary m-3" (click)="getProductsGreaterThan(300)">
+   >300
+</button>
+
+<button class="btn btn-primary m-3" (click)="getProductsGreaterThan(400)">
+   >400
+</button>
+
+<hr>
+<button class="btn btn-primary m-3" *ngFor="let p of products"  
+(click)="getProductByName(p.name)"> {{p.name}}</button>
+
+<hr>
+
+<h4>{{user.name}}</h4>

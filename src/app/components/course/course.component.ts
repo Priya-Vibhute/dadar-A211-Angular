@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { log } from 'console';
 
 @Component({
   selector: 'app-course',
@@ -16,5 +17,11 @@ export class CourseComponent {
   @Input() level = "Beginner"
   @Input() description = "Learn the basics of Angular development."
   @Input() price = 99.99
+
+
+  constructor()
+  {
+    console.log(this.instructor)
+  }
 
 }

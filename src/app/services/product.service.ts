@@ -29,4 +29,9 @@ export class ProductService {
   {
      return this.products.filter(p=>p.price>price)
   }
+  //Product 1
+  getByName(name:string)
+  {
+     return this.products.filter(p=>p.name==name)
+  }
 }
