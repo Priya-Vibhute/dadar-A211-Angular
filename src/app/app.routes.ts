@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { IoexampleComponent } from './components/ioexample/ioexample.component';
 import { DirectiveComponent } from './components/directive/directive.component';
 import { ServiceexampleComponent } from './components/serviceexample/serviceexample.component';
+import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
 
 export const routes: Routes = [
     {
@@ -42,5 +43,9 @@ export const routes: Routes = [
         path:'directives-example',
         component:DirectiveComponent
     },
+    {
+        path:'lifecycle-methods',
+        component:LifecycleComponent
+    }
     
 ];
