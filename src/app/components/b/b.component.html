@@ -1,4 +1,17 @@
 <div class="container m-3 p-3 bg-danger text-white">
+
     <h3>B component -Child</h3>
     <p>{{message}}</p>
+    <ng-content></ng-content>
+    <hr>
+
+    <p  #para >Lorem, ipsum.</p>
+    <input type="text" #input>
+
+    <div class="bg-warning m-3 p-3" style="height: 200px;  width: 200px;" #box (click)="makeCircle()">
+       box
+    </div>
 </div>
+
+
+

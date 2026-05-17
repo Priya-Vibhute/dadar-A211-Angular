@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, SimpleChange, ViewChild } from '@angular/core';
 import { log } from 'console';
 
 @Component({
@@ -10,6 +10,9 @@ import { log } from 'console';
 export class BComponent {
          
     @Input()  message:string="Good Morning"
+    @ViewChild('para') paragraph!:ElementRef;
+    @ViewChild('input') inputBox!:ElementRef;
+    @ViewChild('box')  box !:ElementRef;
 
     constructor()
     {
@@ -22,12 +25,45 @@ export class BComponent {
             console.log("ngOnInit",this.message)
     }
 
-    ngOnChanges()
+    ngOnChanges(changes:SimpleChange)
     {
-      console.log("ngOnChanges");
+      console.log("ngOnChanges",changes);
       
     }
 
+    ngDoCheck()
+    {
+      console.log("ngDoCheck")
+    }
+
+    ngOnDestroy()
+    {
+      console.log("ngOnDestroy")
+    }
+
+    ngAfterContentInit()
+    {
+      console.log("ngAfterContentInit")
+    }
+
+    ngAfterContentChecked()
+    {
+      console.log("ngAfterContentChecked")
+    }
+
+    ngAfterViewInit()
+    {
+      this.paragraph.nativeElement.style.backgroundColor="plum"
+      this.inputBox.nativeElement.focus()
+      console.log("ngAfterViewInit",this.paragraph.nativeElement)
+    }
+
+    makeCircle()
+    {
+        this.box.nativeElement.style.borderRadius="50%"
+        this.box.nativeElement.style.backgroundColor="plum"
+
+    }
 
 
 }

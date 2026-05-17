@@ -1,5 +1,37 @@
 
 <div class="container m-3 p-3 bg-warning">
-    <h3>A component-parent</h3>
-    <app-b [message]="'Good Evening'"></app-b>
+    <h3>A component-parent  </h3>
+
+    <app-b [message]="messageFromParent"  *ngIf="isVisible">
+         <div>
+            <ul>
+                <li><u>{{contentMessage}}</u></li>
+                <li>List item 2</li>
+            </ul>
+         </div>  
+    </app-b>
+
+    <hr>
+
+     <app-b [message]="messageFromParent"  *ngIf="isVisible">
+         <div>
+            <p>Lorem ipsum dolor sit amet.  {{contentMessage}}</p>
+         </div>  
+    </app-b>
+
+
+    <hr>
+
+        <button class="btn btn-info m-2" (click)="changeContentMessge('Javascript')">Content 1</button>
+
+         <button class="btn btn-info m-2" (click)="changeContentMessge('TypeScrip')">Content 2</button>
+     
+    <hr>
+
+
+    <button class="btn btn-primary " (click)="changeIsVisible()">Click here </button>
+
+    <button class="btn btn-primary m-4" (click)="changeMessage('Bye Bye')">Bye Bye</button>
+    <button class="btn btn-primary m-4" (click)="changeMessage('Welcome')">welcome</button>
+    <button class="btn btn-primary m-4" (click)="changeMessage('Good Night')">Good Night</button>
 </div>
