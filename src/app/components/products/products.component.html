@@ -1,1 +1,24 @@
-<p>products works!</p>
+
+
+<div class="container m-3 p-3">
+
+    <button class="btn btn-primary m-3" (click)="getByCategory('men\'s clothing')">Men's Clothing</button>
+    <button class="btn btn-primary m-3" (click)="getByCategory('jewelery')">Jewelery</button>
+    <button class="btn btn-primary m-3" (click)="getByCategory('electronics')">electronics</button>
+
+</div>
+
+<div class="row row-cols-1 row-cols-md-4 g-4">
+
+ <div class="col" *ngFor="let p of products">
+    <div class="card">
+      <img src={{p.image}} class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{p.title}}</h5>
+        <p class="card-text">{{p.description | slice : 0: 100}}....Read more</p>
+        <p class="card-text">Category :{{p.category}}</p>
+      </div>
+    </div>
+  </div>
+
+</div>

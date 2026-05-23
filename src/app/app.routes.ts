@@ -10,6 +10,10 @@ import { DirectiveComponent } from './components/directive/directive.component';
 import { ServiceexampleComponent } from './components/serviceexample/serviceexample.component';
 import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
 import { ObservableComponent } from './components/observable/observable.component';
+import { ProductsComponent } from './components/products/products.component';
+import { QuotesComponent } from './components/quotes/quotes.component';
+import { FormHandling1Component } from './components/form-handling-1/form-handling-1.component';
+import { FormHandling2Component } from './components/form-handling-2/form-handling-2.component';
 
 export const routes: Routes = [
     {
@@ -51,6 +55,22 @@ export const routes: Routes = [
     {
         path:'observable',
         component:ObservableComponent
+    },
+    {
+        path:'products',
+        component:ProductsComponent
+    },
+    {
+        path:'quotes',
+        component:QuotesComponent
+    },
+    {
+        path:'form-handling-1',
+        component:FormHandling1Component
+    },
+    {
+        path:'form-handling-2',
+        component:FormHandling2Component
     }
     
 ];

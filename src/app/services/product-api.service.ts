@@ -21,6 +21,10 @@ export interface Product
 export class ProductApiService {
 
   constructor(private httpClient:HttpClient) { 
+  }
 
+  getProducts()
+  {
+   return  this.httpClient.get<Product[]>("https://fakestoreapi.com/products")
   }
 }

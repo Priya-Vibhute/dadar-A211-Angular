@@ -1,0 +1,27 @@
+<div>
+    <button class="btn btn-primary m-3" (click)="getByAuthor('Bill Gates')">Bill Gates</button>
+    <button class="btn btn-primary m-3" (click)="getByAuthor('Rumi')">Rumi</button>
+    <button class="btn btn-primary m-3" (click)="getQuotes()">All quotes</button>
+
+
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+
+            <th scope="col">id</th>
+            <th scope="col">Quote</th>
+            <th scope="col">Author</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let q of quotes">
+            <td>{{q.id}}</td>
+            <td>{{q.quote}}</td>
+            <td>{{q.author}}</td>
+        </tr>
+
+    </tbody>
+</table>
