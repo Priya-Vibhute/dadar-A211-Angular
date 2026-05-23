@@ -9,6 +9,7 @@ import { IoexampleComponent } from './components/ioexample/ioexample.component';
 import { DirectiveComponent } from './components/directive/directive.component';
 import { ServiceexampleComponent } from './components/serviceexample/serviceexample.component';
 import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
+import { ObservableComponent } from './components/observable/observable.component';
 
 export const routes: Routes = [
     {
@@ -46,6 +47,10 @@ export const routes: Routes = [
     {
         path:'lifecycle-methods',
         component:LifecycleComponent
+    },
+    {
+        path:'observable',
+        component:ObservableComponent
     }
     
 ];
