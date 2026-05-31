@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg custom-navbar">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" routerLink="/">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -8,71 +8,77 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+          <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
         </li>
         
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/register">Register</a>
+          <a class="nav-link" routerLink="/register" routerLinkActive="active">Register</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/login">Login</a>
+          <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/databinding">Data Binding</a>
+          <a class="nav-link" routerLink="/databinding" routerLinkActive="active">Data Binding</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/services">Services</a>
+          <a class="nav-link" routerLink="/services" routerLinkActive="active">Services</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/pipes">Pipes</a>
+          <a class="nav-link" routerLink="/pipes" routerLinkActive="active">Pipes</a>
         </li>
         
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/ioexample">Input/Output Example</a>
+          <a class="nav-link" routerLink="/ioexample" routerLinkActive="active">Input/Output Example</a>
         </li>
 
          <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/directives-example">Directives</a>
+          <a class="nav-link" routerLink="/directives-example" routerLinkActive="active">Directives</a>
         </li>
 
         <!-- lifecycle-methods -->
 
          <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/lifecycle-methods">Lifecycle methods</a>
+          <a class="nav-link" routerLink="/lifecycle-methods" routerLinkActive="active">Lifecycle methods</a>
         </li>
         
         <!-- Observables -->
 
          <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/observable">Observables</a>
+          <a class="nav-link" routerLink="/observable" routerLinkActive="active">Observables</a>
         </li>
         <!-- Products APi -->
 
          <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/products">Products</a>
+          <a class="nav-link" routerLink="/products" routerLinkActive="active">Products</a>
         </li>
 
 
         <!-- Quotes -->
 
           <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/quotes">Quotes</a>
+          <a class="nav-link" routerLink="/quotes" routerLinkActive="active">Quotes</a>
         </li>
 
          <!-- Form Handling 1 -->
 
           <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/form-handling-1">Form Handling 1</a>
+          <a class="nav-link" routerLink="/form-handling-1" routerLinkActive="active">Form Handling 1</a>
         </li>
 
          <!-- Form Handling 2 -->
 
+         <li class="nav-item">
+          <a class="nav-link" routerLink="/form-handling-2" routerLinkActive="active">Form Handling 2</a>
+        </li>
+
+         <!-- Signals -->
+
           <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/form-handling-2">Form Handling 2</a>
+          <a class="nav-link" routerLink="/signals" routerLinkActive="active">Signals</a>
         </li>
 
       </ul>

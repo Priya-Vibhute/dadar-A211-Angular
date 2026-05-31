@@ -27,4 +27,9 @@ export class ProductApiService {
   {
    return  this.httpClient.get<Product[]>("https://fakestoreapi.com/products")
   }
+
+  getProductById(id :string)
+  {
+    return this.httpClient.get<Product>(`https://fakestoreapi.com/products/${id}`)
+  }
 }

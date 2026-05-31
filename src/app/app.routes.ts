@@ -14,6 +14,9 @@ import { ProductsComponent } from './components/products/products.component';
 import { QuotesComponent } from './components/quotes/quotes.component';
 import { FormHandling1Component } from './components/form-handling-1/form-handling-1.component';
 import { FormHandling2Component } from './components/form-handling-2/form-handling-2.component';
+import { SignalComponent } from './components/signal/signal.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { authGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
     {
@@ -30,7 +33,8 @@ export const routes: Routes = [
     },
     {
         path: 'databinding',
-        component: DatabindingComponent
+        component: DatabindingComponent,
+        canActivate:[authGuard]
     },
     {
         path: 'services',
@@ -71,6 +75,14 @@ export const routes: Routes = [
     {
         path:'form-handling-2',
         component:FormHandling2Component
+    },
+    {
+        path:'signals',
+        component:SignalComponent
+    },
+    {
+        path:'product/detail/:id',
+        component:ProductDetailComponent
     }
     
 ];

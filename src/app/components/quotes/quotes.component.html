@@ -9,18 +9,30 @@
 <table class="table">
     <thead>
         <tr>
-
             <th scope="col">id</th>
             <th scope="col">Quote</th>
             <th scope="col">Author</th>
+            <th scope="col">Action</th>
         </tr>
     </thead>
     <tbody>
 
         <tr *ngFor="let q of quotes">
-            <td>{{q.id}}</td>
+            <ng-container *ngIf="isEditable ; then ifBlock else elseBlock">
+            </ng-container>
+
+            <ng-template #ifBlock>
+                    <td><input [value]="q.id"/></td>
+            </ng-template>
+            <ng-template #elseBlock>
+                    <td>{{q.id}}</td>
+            </ng-template>
+
             <td>{{q.quote}}</td>
             <td>{{q.author}}</td>
+            <td><a href="" 
+                class="btn btn-primary" [routerLink]="['/quotes']" [queryParams]="{edit:true}">Edit</a>
+            </td>
         </tr>
 
     </tbody>
