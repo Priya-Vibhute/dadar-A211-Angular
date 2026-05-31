@@ -17,6 +17,10 @@ import { FormHandling2Component } from './components/form-handling-2/form-handli
 import { SignalComponent } from './components/signal/signal.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { authGuard } from './guards/auth.guard';
+import { BookComponent } from './components/book/book.component';
+import { AddbookComponent } from './components/addbook/addbook.component';
+import { UpdatebookComponent } from './components/updatebook/updatebook.component';
+import { DeletebookComponent } from './components/deletebook/deletebook.component';
 
 export const routes: Routes = [
     {
@@ -83,6 +87,24 @@ export const routes: Routes = [
     {
         path:'product/detail/:id',
         component:ProductDetailComponent
+    },
+    {
+        path:'books',
+        component:BookComponent,
+        children:[
+            {
+                path:'add-book',
+                component:AddbookComponent
+            },
+            {
+                path:'update-book',
+                component:UpdatebookComponent
+            },
+            {
+                path:'delete-book',
+                component:DeletebookComponent
+            }
+        ]
     }
     
 ];

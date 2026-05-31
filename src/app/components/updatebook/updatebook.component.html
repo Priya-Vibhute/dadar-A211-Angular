@@ -1,0 +1,75 @@
+<div class="container mt-4">
+  <div class="card shadow">
+    <div class="card-header bg-warning">
+      <h3 class="mb-0">Update Book</h3>
+    </div>
+
+    <div class="card-body">
+      <form>
+
+        <div class="mb-3">
+          <label class="form-label">Book ID</label>
+          <input
+            type="text"
+            class="form-control"
+            value="101"
+            readonly
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Book Title</label>
+          <input
+            type="text"
+            class="form-control"
+            value="Java Programming"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Author Name</label>
+          <input
+            type="text"
+            class="form-control"
+            value="James Gosling"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Price</label>
+          <input
+            type="number"
+            class="form-control"
+            value="599"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Category</label>
+          <select class="form-select">
+            <option>Database</option>
+            <option selected>Programming</option>
+            <option>Web Development</option>
+            <option>Cloud Computing</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Description</label>
+          <textarea class="form-control" rows="4">
+Learn Java from basics to advanced concepts.
+          </textarea>
+        </div>
+
+        <button type="submit" class="btn btn-warning">
+          Update Book
+        </button>
+
+        <button type="button" class="btn btn-secondary ms-2">
+          Cancel
+        </button>
+
+      </form>
+    </div>
+  </div>
+</div>

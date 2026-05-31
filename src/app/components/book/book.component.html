@@ -1,0 +1,52 @@
+<div class="container mt-4">
+  <div class="row">
+    
+    <!-- Books Section -->
+    <div class="col-md-8">
+      <h2 class="mb-3">Books</h2>
+
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Java Programming</h5>
+          <p class="card-text">Author: James Gosling</p>
+          <button class="btn btn-primary" routerLink="/book/1">
+            View Details
+          </button>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Spring Boot Guide</h5>
+          <p class="card-text">Author: Rod Johnson</p>
+          <button class="btn btn-primary" routerLink="/book/2">
+            View Details
+          </button>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">React Development</h5>
+          <p class="card-text">Author: Jordan Walke</p>
+          <button class="btn btn-primary" routerLink="/book/3">
+            View Details
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Router Outlet Section -->
+    <div class="col-md-4">
+      <div class="card shadow">
+        <div class="card-header">
+          <h4>Child Route output</h4>
+        </div>
+        <div class="card-body">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,2 +1,10 @@
 <app-navbar></app-navbar>
+<div class="container bg-warning p-3 m-3">
+
+    <h3>{{isLoggedIn() ? "You are logged In":"You are logged out"}}</h3>
+
+    <button class="btn btn-danger m-2"
+     (click)="toggleLogin()">Login</button>
+     
+</div>
 <router-outlet></router-outlet>
